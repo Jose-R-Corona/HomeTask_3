@@ -6,7 +6,7 @@ syms q1 q2 q3  d1 a2  t real
 
 % set angles 
 q = [q1 q2 q3];
-q_test = [0 pi/2 1];
+q_test = [0 pi/4 1];
 
 %Link lengths
 L=[d1 a2];
@@ -105,7 +105,7 @@ Px=H(1,4);
 Py=H(2,4);
 Pz=H(3,4);
 
-%w=[0,q(2)*cos(q(1))+cos(q(1)),q(1)]';
+%w=[-q(2)*sin(q(1)),q(2)*cos(q(1)),q(1)]';
 
 %j=[Jlinear velocity ; J angular velocity]
 J_1 = [diff(Px,q(1)),diff(Py,q(1)),diff(Pz,q(1)),0,0,1]';
